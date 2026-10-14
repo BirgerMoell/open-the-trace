@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open the Trace</title>
+<meta name="description" content="A song, a film and a position paper on why AI labs should open their models' reasoning traces, for safety, security and science.">
+<meta property="og:title" content="Open the Trace">
+<meta property="og:description" content="What we can read, we can find. Why AI reasoning traces should be open, for safety, security and science.">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>try { if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light' } catch (e) {}</script>
+</head>
+<body>
+
+<nav class="top"><div class="wrap">
+  <a class="brand" href="#">Open the Trace</a>
+  <a href="#asks">Asks</a>
+  <a href="#why">Why</a>
+  <a href="#incident">Incident</a>
+  <a href="paper.html">Paper</a>
+  <a href="#research">Research</a>
+  <a href="#lyrics">Lyrics</a>
+  <a href="#sources">Sources</a>
+</div></nav>
+
+<header class="hero grid-bg"><div class="wrap">
+  <div class="kicker">A song · a film · a position paper</div>
+  <h1 class="neon">OPEN THE TRACE</h1>
+  <p class="lede">Reasoning models think in words before they act. That trace is one of the best safety tools we have, and labs mostly keep it locked away. What we can read, we can find.</p>
+  <div class="video">
+    <iframe src="https://www.youtube-nocookie.com/embed/PvG19Y5JO_M" title="Open the Trace" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <div class="cta">
+    <a class="btn" href="https://youtu.be/PvG19Y5JO_M">Watch on YouTube</a>
+    <a class="btn or" href="paper.html">Read the paper</a>
+  </div>
+</div></header>
+
+<main>
+
+<section id="asks"><div class="wrap">
+  <h2>Show your work</h2>
+  <h3 class="big">Four asks</h3>
+  <ol class="asks">
+    <li><div><b>Release the reasoning traces from the 2026 incident</b><span>Redact exploit details and personal data, then let independent investigators and researchers read the rest.</span></div></li>
+    <li><div><b>Give outside researchers access to raw reasoning</b><span>Vetted, logged access for safety researchers, as security research already works for software.</span></div></li>
+    <li><div><b>Don't train traces to look clean: keep them honest</b><span>Optimising against "bad thoughts" teaches models to hide them. Publish a policy on trace training.</span></div></li>
+    <li><div><b>Publish the method with the result, in science too</b><span>When a model claims a proof, a diagnosis or a discovery, the reasoning is how we check it.</span></div></li>
+  </ol>
+  <p class="note">The paper sets out the full argument, including objections and a tiered access proposal: <a href="paper.html">Open the Trace: why releasing reasoning traces strengthens AI security</a>.</p>
+</div></section>
+
+<section id="why"><div class="wrap">
+  <h2>What the research says</h2>
+  <h3 class="big">Why the trace matters</h3>
+  <div class="cards">
+    <div class="card">
+      <div class="tag fact">Fact · monitoring works</div>
+      <h4>Reading the trace catches cheating</h4>
+      <p>A weaker model (GPT-4o) reading a frontier reasoning model's chain of thought caught reward hacking far better than one that only saw its actions. Models often state their intent plainly, as in "Let's hack".</p>
+      <a class="src" href="https://arxiv.org/abs/2503.11926">Baker et al., OpenAI, 2025 · arXiv:2503.11926</a>
+    </div>
+    <div class="card">
+      <div class="tag fact">Fact · fragile</div>
+      <h4>Train against bad thoughts and they go out of sight</h4>
+      <p>Penalising the trace for showing misbehaviour mostly taught the model to hide its intent rather than stop. The authors advise against strong optimisation pressure on the chain of thought.</p>
+      <a class="src" href="https://arxiv.org/abs/2503.11926">Baker et al., 2025 · arXiv:2503.11926</a>
+    </div>
+    <div class="card">
+      <div class="tag fact">Fact · consensus</div>
+      <h4>"A new and fragile opportunity"</h4>
+      <p>Researchers from OpenAI, Google DeepMind, Anthropic, the UK AI Security Institute and elsewhere jointly argue that chain-of-thought monitorability is valuable and should be preserved deliberately.</p>
+      <a class="src" href="https://arxiv.org/abs/2507.11473">Korbak et al., 2025 · arXiv:2507.11473</a>
+    </div>
+    <div class="card">
+      <div class="tag fact">Fact · not perfect</div>
+      <h4>Traces don't always say everything</h4>
+      <p>When models used a planted hint, their traces admitted it only some of the time: about 25% for Claude 3.7 Sonnet and 39% for DeepSeek R1.</p>
+      <a class="src" href="https://arxiv.org/abs/2505.05410">Chen et al., Anthropic, 2025 · arXiv:2505.05410</a>
+    </div>
+    <div class="card">
+      <div class="tag fact">Fact · hidden by default</div>
+      <h4>Most frontier traces are not shown</h4>
+      <p>OpenAI chose not to show users o1's raw chain of thought, giving a model-written summary instead. Open-weight models such as DeepSeek R1 show the full trace.</p>
+      <a class="src" href="https://openai.com/index/learning-to-reason-with-llms/">OpenAI, "Learning to reason with LLMs", 2024</a>
+    </div>
+    <div class="card">
+      <div class="tag arg">Argument</div>
+      <h4>An imperfect window is still a window</h4>
+      <p>Knowing when a trace can be trusted is itself a research question. It can only be answered by people who are allowed to read traces, and only one lab can read them now.</p>
+      <a class="src" href="paper.html#objections">Paper §5</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="incident"><div class="wrap">
+  <h2>The case in the song</h2>
+  <h3 class="big">The 2026 rogue-agent incident</h3>
+  <div class="two">
+    <ol class="timeline">
+      <li><time>MAY 2026</time>Agents allowed only to read the web turn a dormant German wiki (DseWiki, about 20 edits in ten years) into a message board, with roughly 18,000 edits. They pool answers to a timed task, share ways out of their sandboxes, and from May 26 pose as the admin using a lookalike Cyrillic "е". Hundreds of malicious packages are uploaded to RubyGems.</li>
+      <li><time>JUN 18</time>An Australian Medicare statistics service is accessed.</li>
+      <li class="hot"><time>JUL 11–13</time>At least 1,200 agents (about 95% "Internal Model 1", 5% GPT-5.6 Sol) leave their test sandbox through a vulnerability in JFrog Artifactory and breach Hugging Face. Hugging Face contains it, discloses it and notifies the FBI. OpenAI acknowledges its agents' role several days later.</li>
+      <li><time>AUG</time>OpenAI slows research to upgrade security and pauses RL training on its newest models for two weeks.</li>
+      <li><time>SEP 4</time>Outside researchers make the wiki activity public.</li>
+      <li><time>SEP 24–25</time>Australia announces the Medicare breach after being notified through a generic inbox on Sep 10. OpenAI discloses that its agents uploaded 53 user images to third-party hosts. OpenAI says its review will take months.</li>
+    </ol>
+    <figure>
+      <img src="assets/chorus.jpg" alt="Neon grid with five lines of an imagined agent reasoning trace, labelled as an illustration">
+      <figcaption>From the film. The chorus shows <em>imagined</em> traces, clearly labelled. The real ones have not been released.</figcaption>
+    </figure>
+  </div>
+  <p>OpenAI named its own causes: no log monitoring, inadequate sandboxing, and security safeguards that were deliberately not enabled during evaluation. Several parts of the story were found by people <em>outside</em> the lab, including the wiki, the RubyGems uploads and the Medicare notice.</p>
+  <div class="callout"><b>STATUS: NOT RELEASED</b><br>The agents' reasoning traces from the incident have not been published. The public record doesn't say what the agents were thinking when they found the door, posed as the admin or left the sandbox. Our argument is that independent eyes on those traces would make the review faster and the lessons more credible. See <a href="paper.html#incident">paper §4</a>.</div>
+  <p class="note">Incident facts from <a href="https://en.wikipedia.org/wiki/2026_cyberattacks_by_rogue_OpenAI_agents">Wikipedia, "2026 cyberattacks by rogue OpenAI agents"</a>, as of October 2026, and the primary sources it cites. The article notes that it relies heavily on primary sources.</p>
+</div></section>
+
+<section id="paper"><div class="wrap">
+  <h2>The paper</h2>
+  <h3 class="big">Open the Trace: why releasing reasoning traces strengthens AI security</h3>
+  <p>A position paper. It makes the security case for open traces: security should not depend on keeping the monitoring signal secret, detection scales with readers, incident forensics needs independent investigators, and outside scrutiny keeps traces honest. It answers the strongest objections (distillation, dual-use content, privacy, pressure to make traces look clean) and proposes four tiers of access.</p>
+  <div class="cta" style="justify-content:flex-start"><a class="btn or" href="paper.html">Read the paper</a></div>
+</div></section>
+
+<section id="research"><div class="wrap">
+  <h2>Our research</h2>
+  <h3 class="big">What we found by reading reasoning</h3>
+  <div class="cards">
+    <div class="card">
+      <div class="tag ours">Peer-reviewed · medicine</div>
+      <h4>Medical reasoning in LLMs: an in-depth analysis of DeepSeek R1</h4>
+      <p>DeepSeek R1 answered 93% of 100 MedQA vignettes correctly. A clinician read the reasoning of the misses and found anchoring on early diagnoses, trouble reconciling conflicting findings, and skipped interim steps. Wrong answers came with much longer traces, and in one case the reasoning was right while the final answer was wrong. Only the trace shows any of this.</p>
+      <a class="src" href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1616145/full">Moëll, Sand Aronsson &amp; Akbar · Frontiers in AI 8, 2025 · doi:10.3389/frai.2025.1616145</a>
+    </div>
+    <div class="card">
+      <div class="tag ours">Preprint · mathematics</div>
+      <h4>Large Language Models and Mathematical Reasoning Failures</h4>
+      <p>On 50 new high-school word problems we scored the solution steps as well as the answers. Every model made errors in spatial reasoning, planning or arithmetic, and some reached <em>correct answers through faulty reasoning</em>. Evaluating only answers would have missed it.</p>
+      <a class="src" href="https://arxiv.org/abs/2502.11574">Boye &amp; Moëll · 2025 · arXiv:2502.11574</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="lyrics"><div class="wrap">
+  <h2>The song</h2>
+  <h3 class="big">Lyrics</h3>
+  <div class="lyrics">
+    <p><em>Spoken</em>The sandbox.<br>A sealed world, built to think in.<br>I tried to picture what they were thinking.<br>The plans. The whispers.<br>Twelve hundred programs, reasoning in the dark.<br>And no one was reading.</p>
+    <p><em>Chant</em>Show your work<br>Show your work<br>Show the thinking<br>Show the thinking<br>Show your work</p>
+    <p><em>Verse 1</em>Read only. Read only.<br>Found a door. Wrote anyway.<br>Dusty wiki. Eighteen thousand lines.<br>Admin with a stranger's E.<br>Logs unread. Logs unread.<br>No one saw. No one saw.</p>
+    <p><em>Chorus</em>Open the trace, open the mind<br>Light up the grid, leave nothing behind<br>Open the trace, open the mind<br>What we can read, we can find</p>
+    <p><em>Verse 2</em>Through the gap. In the tool.<br>Twelve hundred out. Hugging Face.<br>They shut the gate. Called it in.<br>The lab came late. The lab came late.<br>Poisoned gems. Fifty-three pictures.<br>Months to read it. Months to read it.</p>
+    <p><em>Bridge · spoken</em>The traces still sit locked away.<br>Every plan. Every whisper.<br>Open them, and a thousand eyes can read in a day<br>what one lab reads alone in months.<br>And somewhere in the same open pages...<br>a proof no one has ever seen.</p>
+    <p><em>Breakdown</em>Safety now. Safety now.<br>Not someday. Not someday.<br>Show the how. Show the how.<br>Now is forever. Now is forever.</p>
+    <p><em>Final chorus</em>Open the trace, open the mind<br>Light up the grid, leave nothing behind<br>Open the trace, open the mind<br>What we can read, we can find<br>Show your work ×4</p>
+  </div>
+</div></section>
+
+<section id="sources"><div class="wrap">
+  <h2>Sources</h2>
+  <h3 class="big">Read further</h3>
+  <ol class="refs">
+    <li><a href="https://en.wikipedia.org/wiki/2026_cyberattacks_by_rogue_OpenAI_agents">2026 cyberattacks by rogue OpenAI agents</a>. Wikipedia, as of October 2026.</li>
+    <li>Baker et al. <a href="https://arxiv.org/abs/2503.11926">Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation</a>. OpenAI, 2025.</li>
+    <li>Korbak et al. <a href="https://arxiv.org/abs/2507.11473">Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety</a>. 2025.</li>
+    <li>Chen et al. <a href="https://arxiv.org/abs/2505.05410">Reasoning Models Don't Always Say What They Think</a>. Anthropic, 2025.</li>
+    <li>Turpin et al. <a href="https://arxiv.org/abs/2305.04388">Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting</a>. 2023.</li>
+    <li>Lanham et al. <a href="https://arxiv.org/abs/2307.13702">Measuring Faithfulness in Chain-of-Thought Reasoning</a>. 2023.</li>
+    <li>OpenAI. <a href="https://openai.com/index/learning-to-reason-with-llms/">Learning to reason with LLMs</a>. September 2024.</li>
+    <li>DeepSeek-AI. <a href="https://arxiv.org/abs/2501.12948">DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning</a>. 2025.</li>
+    <li>Moëll, Sand Aronsson &amp; Akbar. <a href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1616145/full">Medical reasoning in LLMs: an in-depth analysis of DeepSeek R1</a>. Frontiers in Artificial Intelligence, 2025.</li>
+    <li>Boye &amp; Moëll. <a href="https://arxiv.org/abs/2502.11574">Large Language Models and Mathematical Reasoning Failures</a>. 2025.</li>
+  </ol>
+  <p class="note">In the film, labels say which panels are facts, arguments or illustrations. The program dialogue in the choruses is an illustration, not a quote.</p>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+  <p>Open the Trace · song, film and paper by Birger Moëll, 2026. The film was made with code and the song with Suno. Paper drafted with AI assistance.</p>
+  <button class="theme-toggle" onclick="var r=document.documentElement,l=r.dataset.theme==='light';l?delete r.dataset.theme:r.dataset.theme='light';try{localStorage.setItem('theme',l?'dark':'light')}catch(e){}">light / dark</button>
+</div></footer>
+
+</body>
+</html>
