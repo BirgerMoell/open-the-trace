@@ -124,7 +124,7 @@ figcaption { font-size: 14px; color: var(--dim); margin-top: 8px; }
 .lyrics p { break-inside: avoid; margin: 0 0 18px; }
 .lyrics em { color: var(--or); font-style: normal; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; display: block; }
 
-ol.refs { padding-left: 22px; font-size: 15px; }
+ol.refs { padding-left: 30px; font-size: 15px; }
 ol.refs li { margin-bottom: 8px; }
 
 footer { border-top: 1px solid var(--line); padding: 36px 0 60px; color: var(--dim); font-size: 14px; }
@@ -146,7 +146,7 @@ article.paper .box { border: 1px solid var(--line); background: var(--panel); pa
 article.paper .box b.lbl { font: 700 12px var(--mono); letter-spacing: 0.18em; color: var(--or); display: block; margin-bottom: 4px; }
 article.paper sup a { text-decoration: none; font-family: var(--sans); font-size: 12px; }
 article.paper ol.refs { font: 15px/1.55 var(--sans); }
-pre.bib { background: var(--panel); border: 1px solid var(--line); padding: 14px; overflow-x: auto; font: 13px/1.5 var(--mono); }
+pre.bib { white-space: pre-wrap; background: var(--panel); border: 1px solid var(--line); padding: 14px; overflow-x: auto; font: 13px/1.5 var(--mono); }
 @media print {
   nav.top, .theme-toggle { display: none; }
   body { background: #fff; color: #000; }
